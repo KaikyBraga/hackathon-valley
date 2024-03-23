@@ -1,0 +1,126 @@
+/*Para o botão de fazer download*/
+.st-emotion-cache-lkx26v.ef3psqc12 {
+    background-color: #026773; 
+    color: #FFFFFF; 
+}
+
+/*Para algumas letras no site*/
+.st-emotion-cache-xujc5b.e1nzilvr5 p {
+    color: #000000; 
+}
+
+/*Para a cor das letras da aba esquerda do site*/
+.st-emotion-cache-15zws4i.eczjsme5 {
+    color: #FFFFFF; 
+}
+
+/*Para a cor das letras dentro dos botões*/
+.st-c7.st-be.st-c8.st-c9.st-ca.st-bg.st-cb.st-cc.st-cd {
+    color: #FFFFFF; 
+}
+
+/*Para o botãio que aparece em cima da imagem*/
+button[data-testid="StyledFullScreenButton"] {
+    display: none;
+}
+
+/*Para o link que fica acima dos títulos*/
+.st-emotion-cache-1xy3pbc {
+    display: none;
+}
+
+/*Para o "Made Streamlit"*/
+.st-emotion-cache-ot9ait {
+    display: none;
+}
+
+/*Para os 3 pontinhos no canto superior*/
+.st-emotion-cache-czk5ss {
+    display: none;
+}
+
+.st-emotion-cache-1a7s3xf {
+    display: none;
+}
+
+/*Para a palavra deploy no canto superior*/
+.st-emotion-cache-1wbqy5l.e17vllj40 {
+    display: none;
+}
+
+/*Para a setinha do select box*/
+.st-bf.st-bg.st-b4.st-d1.st-c2.st-d2.st-c7 svg {
+    fill: #FFFFFF !important;
+}
+
+/*Para o texto do select box*/
+.st-c8.st-bf.st-c9.st-ca.st-cb.st-bh.st-cc.st-cd.st-ce {
+    color: #FFFFFF !important;
+}
+
+/*Para o símbolo do botão de upload*/
+.st-emotion-cache-1l1d1zw {
+    color: #FFFFFF !important;
+}
+
+/*Para as letras superiores do botão de upload*/
+.st-emotion-cache-u8hs99[data-testid="stFileDropzoneInstructions"] {
+    color: #FFFFFF;
+}
+
+/*Para as letras inferiores do botão de upload*/
+.st-emotion-cache-1t8kd5l {
+    color: #FFFFFF !important;
+}
+
+/*Para a aba que fica na parte superior do site*/
+.st-emotion-cache-uc1cuc[data-testid="stHeader"] {
+    background-color: #F2E3D5;
+}
+
+/*Para as abas que ficam no canto esquerdo do site*/
+.st-emotion-cache-6qob1r[data-testid="stSidebarContent"] {
+    background-color: #026773;
+    color: #FFFFFF;
+}
+
+/*Para o fundo das páginas*/
+.st-emotion-cache-1y4p8pa[data-testid="block-container"],
+.st-emotion-cache-1wrcr25[data-testid="stAppViewContainer"],
+.st-emotion-cache-18ni7ap[data-testid="stHeader"] {
+    background-color: #F2E3D5;
+    color: #000000;
+}
+
+/*Para a linha no canto superior do site*/
+.st-emotion-cache-1dp5vir[data-testid="stDecoration"] {
+    visibility: hidden;
+}
+
+/*Para o botão de link para o GitHub da página Motivation*/
+.stButton > button {
+    background-color: #3CA6A6; 
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px; /* Tamanho do botão ajustado */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada a transição para a cor do texto */
+    box-shadow: 0 4px 6px black;
+}
+
+.stButton > button:hover {
+    background-color: #215e5e; 
+    color: #FFFFFF;  /* Especifica a cor do texto no estado :hover */
+}
+
+/*Para os títulos*/
+h1 {
+    font-size: 40px;
+    color: #012E40;
+    white-space: nowrap;
+    border-bottom: 2px solid #012E40; /* Adiciona uma linha de borda semelhante à cor do botão */
+    padding-bottom: 10px; /* Adiciona espaço entre o título e a borda */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+    text-align: center;
+}
