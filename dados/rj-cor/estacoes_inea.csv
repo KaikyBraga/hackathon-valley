@@ -1,0 +1,7 @@
+,id_estacao,estacao,tipo_estacao,regiao_hidrografica,bacia,latitude,longitude,altitude,data_implantacao
+0,1,Campo Grande,Plu,Baia de Guanabara,Bacia do Canal do Guandu,-22.919278,-43.543778,Nao possui,2014-08-13
+1,2,Capela Mayrink,Plu/Flu,Baia de Guanabara,Bacia contribuinte ao Complexo Lagunar de Jacarepagua,-22.956833,-43.2775,Nao possui,2014-10-07
+2,3,Eletrobras,Plu,Baia de Guanabara,Bacia contribuinte ao Complexo Lagunar de Jacarepagua,-22.92228,-43.419917,Nao possui,2005-06-24
+3,4,Realengo,Plu,Baia de Guanabara,Bacia do Pavuna-meriti,-22.866111,-43.423806,30,1965-01-01
+4,5,Sao Cristovao,Plu/Flu,Baia de Guanabara,Bacias drenantes da vertente norte da Serra da Carioca,-22.91075,-43.22325,Nao possui,2012-04-13
+5,6,Mendanha,Plu,Guandu,Bacia do Canal do Guandu,-22.864083,-43.544,Nao possui,1970-07-07
