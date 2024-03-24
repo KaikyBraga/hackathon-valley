@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 # DF'S DataRio 
 df_bairro = pd.read_csv("dados/datario/bairro.csv")
 df_chamado = pd.read_csv("dados/datario/chamado.csv")
@@ -21,3 +22,7 @@ df_taxa_precipitacao_websirene = pd.read_csv("dados/rj-cor/taxa_precipitacao_web
 df_nivel_lamina_agua_via= pd.read_csv("dados/rj-rioaguas/nivel_lamina_agua_via.csv")
 df_ponto_supervisionado_alagamento = pd.read_csv("dados/rj-rioaguas/ponto_supervisionado_alagamento.csv")
 df_sub_bacias = pd.read_csv("dados/rj-rioaguas/sub_bacias.csv")
+
+# Dados Auxiliares
+datas_precipitacao = df_taxa_precipitacao_guaratiba["data_particao"].sort_values()
+datas_precipitacao = datas_precipitacao.unique()

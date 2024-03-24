@@ -11,13 +11,16 @@ from bokeh.io import show
 from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar, HoverTool
 from bokeh.plotting import figure
 from bokeh.palettes import brewer
+from dataframes import *
 
-def df_mapa(df_bairro=df_bairro, df_taxa_precipitacao_guaratiba=df_taxa_precipitacao_guaratiba):
+def df_mapa(df_bairro=df_bairro, df_taxa_precipitacao_guaratiba=df_taxa_precipitacao_guaratiba, data_fim=datas_precipitacao[-1],data_inicio=datas_precipitacao[0]):
     """
     Prepração dos dados para Plotagem do Mapa de Precipitação.
     """
     
     # Filtro dos colunas de Precipitação
+    df_taxa_precipitacao_guaratiba = df_taxa_precipitacao_guaratiba[data_inicio <= df_taxa_precipitacao_guaratiba["data_particao"]]
+    df_taxa_precipitacao_guaratiba = df_taxa_precipitacao_guaratiba[df_taxa_precipitacao_guaratiba["data_particao"] <= data_fim]
     df_taxa_precipitacao_guaratiba = df_taxa_precipitacao_guaratiba.groupby("bairro").mean("predictions").reset_index()
     df_taxa_precipitacao_guaratiba = df_taxa_precipitacao_guaratiba[["bairro","predictions"]]
 
@@ -49,7 +52,7 @@ def converter_geojson(df):
 
     return geo_source
 
-def bokeh_plot_map(df=df_mapa(), column="predictions", title="Nível de Precipitação no Rio de Janeiro"):
+def bokeh_plot_map(df, column="predictions", title="Nível de Precipitação no Rio de Janeiro"):
     """
     Plot bokeh map do Nível de Precipitação no Rio de Janeiro
     """
@@ -82,38 +85,9 @@ def bokeh_plot_map(df=df_mapa(), column="predictions", title="Nível de Precipit
     plot.title.text_font = "Arial"
     plot.title.text_font_size = "18pt"
     plot.title.align = "center"
-    plot.title.text_baseline = "middle"
 
     # Ferramentas interativas
     hover = HoverTool(tooltips=[("Bairro", "@bairro"), ("Precipitação", "@predictions")])
     plot.add_tools(hover)
     
     return plot
-
-def plt_plot_map(df_bairro, df_taxa_precipitacao_guaratiba):
-
-    df_bairro = df_mapa(df_bairro, df_taxa_precipitacao_guaratiba)
-    
-    df_bairro = gpd.GeoDataFrame(df_bairro, geometry="geometry", crs=3395)
-
-    janela, graf = plt.subplots(1, 1, figsize=(10, 10))
-    df_bairro.plot("predictions", edgecolor="black", linewidth=0.4, ax=graf, cmap=plt.cm.Blues)
-    graf.set_title("Nível de Precipitação no mês",
-                    fontdict={"fontsize": "20", "fontname": "Arial", "fontweight": "bold"})
-    
-    # Barra de legenda à direita do mapa
-    eixos_divisor = make_axes_locatable(graf)
-    colorbar_axis = eixos_divisor.append_axes("right", size="5%", pad=0.1)
-    cbar = plt.colorbar(plt.cm.ScalarMappable(norm=None, cmap=plt.cm.Blues), cax=colorbar_axis)
-
-    # Rótulos e posições dos ticks na barra de cores
-    ticks = [0, 25, 50, 75, 100]
-    tick_labels = [f'{tick}%' for tick in ticks]
-    cbar.set_ticks([tick / 100 for tick in ticks])
-    cbar.set_ticklabels(tick_labels, fontdict={"fontsize": "10", "fontname": "Arial"})
-    cbar.set_label("Escala de Precipitação", rotation=270, labelpad=15, fontdict={"fontsize": "12", "fontname": "Arial"})
-
-    plt.show()
-
-
-show(bokeh_plot_map())
