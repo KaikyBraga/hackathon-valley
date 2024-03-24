@@ -1,29 +1,29 @@
-,id_estacao,estacao,latitude,longitude
-0,3042,Abolicao,,
-1,3043,Tanque jacarepagua,-22.918,-43.361
-2,3044,Penha,-22.839,-43.279
-3,3045,Praca seca,-22.896,-43.352
-4,3114,Gloria,-22.915,-43.176
-5,3215,Est. pedra bonita,-22.977861,-43.277444
-6,7591,Jardim maravilha,-22.9592,-43.6082
-7,7592,Santa cruz,-22.8897,-43.7175
-8,7593,Realengo batan,-22.864,-43.425
-9,7594,Padre miguel,-22.8689,-43.4507
-10,7595,Salgueiro,-22.929,-43.228
-11,7596,Andarai,-22.93,-43.25
-12,7597,Ciep samuel wainer,-22.921,-43.227
-13,7599,Vargem pequena,-22.989,-43.433
-14,7600,Jacarepagua,-22.9922,-43.367
-15,7601,Ciep dr. joao ramos de souza,-22.796,-43.203
-16,7602,Sao conrado,-22.995,-43.269
-17,7603,Catete,-22.923,-43.176
-18,7605,Pavuna,-22.8076,-43.3584
-19,7606,Vigario geral,-22.8131,-43.3101
-20,7607,Defesa civil santa cruz,-22.89444,-43.67611
-21,7609,Vicente de carvalho,-22.86086,-43.30756
-22,7610,Alto da boa vista,-22.9666,-43.2965
-23,7611,Tijuca,-22.943,-43.241
-24,7612,Usina,-22.948,-43.258
-25,7613,Higienopolis,-22.869,-43.265
-26,7614,Pilares,-22.875,-43.299
-27,7615,Ilha de paqueta,-22.7613,-43.1084
+id_estacao,estacao,latitude,longitude
+3042,Abolicao,,
+3043,Tanque jacarepagua,-22.918,-43.361
+3044,Penha,-22.839,-43.279
+3045,Praca seca,-22.896,-43.352
+3114,Gloria,-22.915,-43.176
+3215,Est. pedra bonita,-22.977861,-43.277444
+7591,Jardim maravilha,-22.9592,-43.6082
+7592,Santa cruz,-22.8897,-43.7175
+7593,Realengo batan,-22.864,-43.425
+7594,Padre miguel,-22.8689,-43.4507
+7595,Salgueiro,-22.929,-43.228
+7596,Andarai,-22.93,-43.25
+7597,Ciep samuel wainer,-22.921,-43.227
+7599,Vargem pequena,-22.989,-43.433
+7600,Jacarepagua,-22.9922,-43.367
+7601,Ciep dr. joao ramos de souza,-22.796,-43.203
+7602,Sao conrado,-22.995,-43.269
+7603,Catete,-22.923,-43.176
+7605,Pavuna,-22.8076,-43.3584
+7606,Vigario geral,-22.8131,-43.3101
+7607,Defesa civil santa cruz,-22.89444,-43.67611
+7609,Vicente de carvalho,-22.86086,-43.30756
+7610,Alto da boa vista,-22.9666,-43.2965
+7611,Tijuca,-22.943,-43.241
+7612,Usina,-22.948,-43.258
+7613,Higienopolis,-22.869,-43.265
+7614,Pilares,-22.875,-43.299
+7615,Ilha de paqueta,-22.7613,-43.1084
