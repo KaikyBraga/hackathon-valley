@@ -1,0 +1,43 @@
+id_pop,pop_titulo
+0,Ajuste de banco
+1,Acidente/enguiço sem vítima
+2,Acidente com vítima(s)
+3,Acidente com vítima(s) fatal(is)
+4,Incêndio em veículo(s)
+5,Bolsão d'água em via
+6,Alagamentos e enchentes
+7,Manifestação em local público
+8,Incêndio em imóvel
+9,Sinais de trânsito com mau funcionamento
+10,Reintegração de posse
+11,Queda de árvore
+12,Queda de poste
+13,Acidente com queda de carga
+14,Incêndio no entorno de vias públicas
+15,Incêndio dentro de túneis
+16,Vazamento de água / esgoto
+17,Falta de luz / apagão
+18,Implosão
+19,Queda de estrutura de alvenaria
+20,Vazamento de gás
+21,Evento em local público ou particular
+22,Atropelamento
+23,Afundamento de pista / buraco na via
+24,Abalroamento
+25,Obra em local público
+26,Operação policial
+27,Bloco de rua
+28,Deslizamento
+29,Animal em local público
+30,Acionamento de sirenes
+31,Alagamento
+32,Enchente
+33,Lâmina d'água
+34,Acidente ambiental
+35,Bueiro
+36,Resgate ou remoção de animais terrestres e aéreos
+37,Remoção de animais mortos na areia
+38,Resgate de animal marinho preso em rede / encalhado
+39,Incendio em vegetacao
+40,Queda de árvore sobre fiação
+41,Residuos na via
