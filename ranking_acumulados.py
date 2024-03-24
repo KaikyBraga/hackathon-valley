@@ -142,10 +142,6 @@ def criar_grafico_top15(df):
 
     return grafico
 
-df = limpeza_dados_top15_bairros(df_taxa_precipitacao_cemaden, df_taxa_precipitacao_inea, df_taxa_precipitacao_websirene, df_estacoes_alertario, df_estacoes_cemaden, df_estacoes_inea, df_estacoes_websirene)
 
-grafico = criar_grafico_top15(df)
-
-show(grafico)
 
 
