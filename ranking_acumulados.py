@@ -78,16 +78,22 @@ paleta_cores_por_bairro = {"Pavuna":"#3F068F", "Vigario geral":"#4C11F9", "Est. 
 df_ordenado["cores"] = df_ordenado["estacao"].map(paleta_cores_por_bairro)
 
 # Criando a figura
-p = figure(x_range=df_ordenado["estacao"], height=400, width=800, title="Ranking dos bairros que mais chovem no Rio",
+p = figure(x_range=df_ordenado["estacao"], height=600, width=1000, title="Top 15 bairros que mais chovem no Rio",
            toolbar_location=None, tools="")
 
 # Adicionando as barras ao gráfico com a paleta de cores
 p.vbar(x="estacao", top="media_acumulado", width=0.7, source=df_ordenado, line_color="white", fill_color='cores')
 
 # Configurando os eixos
-p.xaxis.major_label_orientation = "vertical"
+p.xaxis.major_label_orientation = 45
+p.xaxis.major_label_text_font_size = "12pt"
 p.xaxis.axis_label = ""
-p.yaxis.axis_label = "Quantidade de Chuva(mm)"
+p.yaxis.axis_label = "Acumulado de Chuva(mm)"
+p.yaxis.axis_label_text_font_size = "14pt"
+
+# Editando o título
+p.title.align = "center"
+p.title.text_font_size = "18pt"
 
 # Adicionando a ferramenta de hover
 hover = HoverTool()
