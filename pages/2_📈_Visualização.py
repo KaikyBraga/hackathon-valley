@@ -18,6 +18,7 @@ from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar, HoverTo
 from bokeh.plotting import figure
 from bokeh.palettes import brewer
 from mapa import *
+from ranking_chamados import top_10_chamados
 
 
 st.set_page_config(page_title="Visualização")
@@ -36,6 +37,12 @@ grafico = criar_grafico_top15(df)
 
 st.bokeh_chart(grafico, use_container_width=True)
 
+# Visualização do top 10 chamados
+
+plot_2 = top_10_chamados(df_bairro, df_chamado)
+
+st.bokeh_chart(plot_2, use_container_width=True)
+
 # Gráfico de Mapa
 start_data, end_data = st.select_slider(
     "Selecione o período de Análise de Precipitação",
@@ -51,4 +58,3 @@ end_data = f"{ano}-{mes}-{dia}"
 df_mapa_precipitacao = df_mapa(data_inicio=start_data, data_fim=end_data)
 
 st.bokeh_chart(bokeh_plot_map(df=df_mapa_precipitacao), use_container_width=True)
-  
