@@ -51,6 +51,3 @@ def top_10_chamados(df_bairro, df_chamado):
     plot_2.add_tools(hover)
 
     return plot_2
-
-# Exibir o gráfico
-show(top_10_chamados(df_bairro, df_chamado))
