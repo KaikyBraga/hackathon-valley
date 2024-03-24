@@ -1,5 +1,5 @@
 import pandas as pd
-
+from datetime import datetime
 
 # DF'S DataRio 
 df_bairro = pd.read_csv("dados/datario/bairro.csv")
@@ -26,3 +26,8 @@ df_sub_bacias = pd.read_csv("dados/rj-rioaguas/sub_bacias.csv")
 # Dados Auxiliares
 datas_precipitacao = df_taxa_precipitacao_guaratiba["data_particao"].sort_values()
 datas_precipitacao = datas_precipitacao.unique()
+for i, data in enumerate(datas_precipitacao):
+    data_ano_mes_dia = data
+    ano, mes, dia = data_ano_mes_dia.split('-')
+    data_dia_mes_ano = f"{dia}-{mes}-{ano}"
+    datas_precipitacao[i] = data_dia_mes_ano
