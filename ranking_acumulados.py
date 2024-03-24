@@ -1,7 +1,7 @@
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+from bokeh.plotting import figure, show
+from bokeh.models import HoverTool
 from dataframes import *
+import pandas as pd
 
 # Renomeando a coluna
 df_taxa_precipitacao_cemaden["acumulado_chuva_96h"] = df_taxa_precipitacao_cemaden["acumulado_chuva_96_h"]
@@ -59,24 +59,40 @@ df_media_por_bairro = df_filtrado.groupby("estacao")["acumulado_chuva_96h"].mean
 # Convertendo a Serie para um Dataframe
 df_media_acumulado_bairro = pd.DataFrame(df_media_por_bairro)
 
+# Reseta o índice para trazer a coluna "estacao" de volta como uma coluna
+df_media_acumulado_bairro.reset_index(inplace=True)
+
 # Renomear a coluna das médias
 df_media_acumulado_bairro["media_acumulado"] = df_media_acumulado_bairro["acumulado_chuva_96h"]
 
 # Ordenando os dados pela coluna "estacao"
 df_ordenado = df_media_acumulado_bairro.sort_values(by="media_acumulado", ascending=False).head(15)
 
-# Criando o gráfico de ranking
-plt.figure(figsize=(10, 6))
-barplot = sns.barplot(x="estacao", y="media_acumulado", data=df_ordenado, palette="plasma", ci=None)
-plt.xlabel("")
-plt.ylabel("Quantidade de Chuva(mm)")
-plt.title("Ranking dos bairros que mais chovem no Rio", color="DarkBlue")
+# Definindo uma paleta de cores personalizada
+paleta_cores_por_bairro = {"Pavuna":"#3F068F", "Vigario geral":"#4C11F9", "Est. pedra bonita":"#8417FA", "Usina":"#0CADFA", 
+                           "Andarai":"#15DBFA", "Vicente de carvalho":"#15E0BE", "Padre miguel":"#00EB7D", "Realengo batan":"#E0E071", 
+                           "Catete":"#E1DC36", "Jacarepagua":"#DCBA13", "Sao conrado":"#DB9F10", "Praca seca":"#FA8D16", 
+                           "Vargem pequena":"#FA5E00", "Jardim maravilha":"#FA0403", "Tanque jacarepagua":"#992400"}
 
-# Girando os rótulos do eixo x
-barplot.set_xticklabels(barplot.get_xticklabels(), rotation=45, horizontalalignment="right")
+# Criando uma nova coluna no DataFrame para armazenar as cores
+df_ordenado["cores"] = df_ordenado["estacao"].map(paleta_cores_por_bairro)
 
-# Evita sobreposição de elementos
-plt.tight_layout()  
+# Criando a figura
+p = figure(x_range=df_ordenado["estacao"], height=400, width=800, title="Ranking dos bairros que mais chovem no Rio",
+           toolbar_location=None, tools="")
 
-plt.show()
+# Adicionando as barras ao gráfico com a paleta de cores
+p.vbar(x="estacao", top="media_acumulado", width=0.7, source=df_ordenado, line_color="white", fill_color='cores')
 
+# Configurando os eixos
+p.xaxis.major_label_orientation = "vertical"
+p.xaxis.axis_label = ""
+p.yaxis.axis_label = "Quantidade de Chuva(mm)"
+
+# Adicionando a ferramenta de hover
+hover = HoverTool()
+hover.tooltips = [("Bairro", "@estacao"), ("Quantidade de Chuva", "@media_acumulado")]
+p.add_tools(hover)
+
+# Exibindo o gráfico
+show(p)
