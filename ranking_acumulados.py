@@ -141,5 +141,3 @@ def criar_grafico_top15(df):
     grafico.add_tools(hover)
 
     return grafico
-
-
