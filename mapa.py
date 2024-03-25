@@ -66,7 +66,7 @@ def bokeh_plot_map(df, column="predictions", title="Nível de Precipitação no 
 
     # Instantiate LinearColorMapper que mapeia linearmente os números em um intervalo em uma sequência de cores
     color_mapper = LinearColorMapper(palette = palette, low = vals.max(), high = vals.min())
-    color_bar = ColorBar(color_mapper=LinearColorMapper(palette = palette, low = vals.min(), high = vals.max()), label_standoff=8, width=800, height=20,
+    color_bar = ColorBar(color_mapper=LinearColorMapper(palette = palette, low = vals.min(), high = vals.max()), label_standoff=8, width=630, height=20,
                          location=(0,0), orientation="horizontal")
     
     # Configurações Base do Plot
