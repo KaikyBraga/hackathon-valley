@@ -1,2 +1,10 @@
 pandas
 bokeh==2.4.3
+matplotlib
+geopandas
+shapely
+geopandas
+json
+pylab
+numpy
+mpl_tools
