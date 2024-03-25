@@ -1,5 +1,6 @@
 import base64
 import streamlit as st
+from os import walk, path
 
 st.set_page_config(page_title="Download dos Dados")
 
@@ -20,4 +21,7 @@ with st.container():
 
 with st.container():
     # Botão para baixar o arquivo CSV
-    st.markdown(download_arquivo_csv("dados/datario/bairro.csv"), unsafe_allow_html=True)     
+    dicionario_arquivos = {}
+    
+    caminho_arquivo = st.selectbox("Selecione o reservatório:", dicionario_arquivos.keys(), format_func=lambda x: dicionario_arquivos[x])
+    st.markdown(download_arquivo_csv(caminho_arquivo), unsafe_allow_html=True)     
