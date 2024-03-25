@@ -39,7 +39,7 @@ samuel = ImageOps.expand(samuel, border=30, fill=None)
 # Exibir imagens redondas lado a lado com espaçamento e nomes abaixo delas
 st.image([kaiky, leonardo, samuel], width=230, caption=["Kaiky Braga", "Leonardo Alexandre", "Samuel Lima"])
 
-st.write("Olá! Somos alunos do 3° Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, iniciamos este projeto com o objetivo de...")
+st.write("Olá! Somos alunos do 3° Período de Ciência de Dados da Escola de Matemática Aplicada da Fundação Getúlio Vargas, iniciamos este projeto com o objetivo de auxiliar a população civil sobre as chuvas do Rio de Janeiro.")
 
 URL_STRING = "https://github.com/LuuSamp/hackathon-valley.git"
 

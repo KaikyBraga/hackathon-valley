@@ -7,13 +7,7 @@ st.set_page_config(page_title="Introdução")
 
 st.title("Hackathon🌟")
 
-st.subheader("Dê um toque estiloso às suas fotos com facilidade")
-st.write("Olá! Bem-vindo ao Visual Matrix, o lugar perfeito para editar as suas fotos! 📸")
-
-st.subheader("Autenticidade")
-st.write("Experimente as diversas opções de personalização ou teste as alterações com a imagem fornecida pelo aplicativo. 🙌")
-
-st.subheader("Salve suas criações com praticidade")
-st.write("Também facilitamos a opção de salvamento para você! Basta fazer o upload da sua imagem, clicar em salvar, confirmar o download e escolher o local preferido para armazenar. 📥")
+st.subheader("Análise dos Dados  Relativos à chuva do Rio de Janeiro")
+st.write("Esse trabalho foi elaborado com base nos dados disponíveis no Datalake relativo às chuvas do Rio de Janeiro. Para proporcionar maiores informações à sociedade civil, foram construídas algumas visualizações interativas.")
 
 st.subheader("Aproveite ao máximo o aplicativo! 😁")

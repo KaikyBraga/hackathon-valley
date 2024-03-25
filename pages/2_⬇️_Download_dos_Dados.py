@@ -33,7 +33,7 @@ def download_arquivo_csv(caminho_arquivo):
     return href
 
 with st.container():
-    st.title("Download dos Dados em tempo real")
+    st.title("Download dos Dados")
     st.write("Clique no botão abaixo para fazer o download dos dados: ")
 
 with st.container():
