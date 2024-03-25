@@ -4,6 +4,4 @@ matplotlib
 geopandas
 shapely
 geopandas
-pylab
 numpy
-mpl_tools
