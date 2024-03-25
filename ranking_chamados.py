@@ -10,6 +10,8 @@ def top_10_chamados(df_bairro, df_chamado):
     Cria top 10 dos bairros com maiores chamados.
     """
 
+    df_bairro.reset_index(drop=True, inplace=True)
+
     # Adicionando a coluna nome_bairro do df_2 ao df_1
     df_merged = pd.merge(df_chamado, df_bairro[["id_bairro", "nome"]], on="id_bairro", how="left")
 

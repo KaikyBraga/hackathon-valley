@@ -19,6 +19,7 @@ from bokeh.plotting import figure
 from bokeh.palettes import brewer
 from mapa import *
 from ranking_chamados import top_10_chamados
+from nivel_reservatorio_lineplot import plot_nivel_reservatorio, trata_nivel_reservatorio
 
 
 st.set_page_config(page_title="Visualização")
@@ -58,3 +59,16 @@ end_data = f"{ano}-{mes}-{dia}"
 df_mapa_precipitacao = df_mapa(data_inicio=start_data, data_fim=end_data)
 
 st.bokeh_chart(bokeh_plot_map(df=df_mapa_precipitacao), use_container_width=True)
+
+# Gráfico reservatórios
+with st.container():
+
+    reservatorio_selecionado, ano_selecionado = trata_nivel_reservatorio(df_nivel_reservatorio)
+
+    # Plotar o gráfico com o reservatório e ano selecionados
+    grafico = plot_nivel_reservatorio(reservatorios=[reservatorio_selecionado], anos=[ano_selecionado])
+
+    st.bokeh_chart(grafico, use_container_width=True)
+
+
+

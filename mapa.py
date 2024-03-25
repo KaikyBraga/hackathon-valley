@@ -24,6 +24,7 @@ def df_mapa(df_bairro=df_bairro, df_taxa_precipitacao_guaratiba=df_taxa_precipit
     df_taxa_precipitacao_guaratiba = df_taxa_precipitacao_guaratiba.groupby("bairro").mean("predictions").reset_index()
     df_taxa_precipitacao_guaratiba = df_taxa_precipitacao_guaratiba[["bairro","predictions"]]
 
+    df_bairro = df_bairro.copy()
     df_bairro.rename(columns={"nome": "bairro"}, inplace=True)
 
     # Adição da coluna de Predição no DataFrame de Bairros
@@ -52,7 +53,7 @@ def converter_geojson(df):
 
     return geo_source
 
-def bokeh_plot_map(df, column="predictions", title="Nível de Precipitação no Rio de Janeiro"):
+def bokeh_plot_map(df, column="predictions", title="Previsão de Chuva no Rio de Janeiro"):
     """
     Plot bokeh map do Nível de Precipitação no Rio de Janeiro
     """
@@ -66,7 +67,7 @@ def bokeh_plot_map(df, column="predictions", title="Nível de Precipitação no 
 
     # Instantiate LinearColorMapper que mapeia linearmente os números em um intervalo em uma sequência de cores
     color_mapper = LinearColorMapper(palette = palette, low = vals.max(), high = vals.min())
-    color_bar = ColorBar(color_mapper=LinearColorMapper(palette = palette, low = vals.min(), high = vals.max()), label_standoff=8, width=800, height=20,
+    color_bar = ColorBar(color_mapper=LinearColorMapper(palette = palette, low = vals.min(), high = vals.max()), label_standoff=8, width=630, height=20,
                          location=(0,0), orientation="horizontal")
     
     # Configurações Base do Plot
