@@ -20,7 +20,6 @@ df_taxa_precipitacao_inea = pd.read_csv("dados/rj-cor/taxa_precipitacao_inea.csv
 df_taxa_precipitacao_websirene = pd.read_csv("dados/rj-cor/taxa_precipitacao_websirene.csv")
 
 # DF'S RJ-rioaguas
-df_nivel_lamina_agua_via= pd.read_csv("dados/rj-rioaguas/nivel_lamina_agua_via.csv")
 df_nivel_reservatorio = pd.read_csv("dados/rj-rioaguas/nivel_reservatorio.csv")
 df_nivel_reservatorio['data_particao'] = pd.to_datetime(df_nivel_reservatorio['data_particao'])
 df_ponto_supervisionado_alagamento = pd.read_csv("dados/rj-rioaguas/ponto_supervisionado_alagamento.csv")
