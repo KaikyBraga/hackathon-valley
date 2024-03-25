@@ -8,7 +8,8 @@ from ranking_chamados import top_10_chamados
 from nivel_reservatorio_lineplot import plot_nivel_reservatorio, trata_nivel_reservatorio
 
 
-st.set_page_config(page_title="Visualização") 
+st.set_page_config(page_title="Visualização")
+ 
 
 with st.container():
     st.title("Visualizações dos Dados")
@@ -31,7 +32,7 @@ with st.container():
 # Gráfico de Mapa
 with st.container():
     start_data, end_data = st.select_slider(
-        "Selecione o período de Análise de Precipitação",
+        "Selecione o período de Análise de Previsão",
         options=datas_precipitacao,
         value=(datas_precipitacao[0], datas_precipitacao[-1]))
     st.write("Você selecionou datas entre", start_data, "e", end_data)

@@ -84,7 +84,7 @@ def bokeh_plot_map(df, column="predictions", title="Previsão de Chuva no Rio de
     plot.title.align = "center"
 
     # Ferramentas interativas
-    hover = HoverTool(tooltips=[("Bairro", "@bairro"), ("Precipitação", "@predictions")])
+    hover = HoverTool(tooltips=[("Bairro", "@bairro"), ("Previsão", "@predictions")])
     plot.add_tools(hover)
     
     return plot
