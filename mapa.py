@@ -1,13 +1,9 @@
 from dataframes import *
-import matplotlib.pyplot as plt
 import geopandas as gpd
 from shapely import wkt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 import pandas as pd
 import geopandas as gpd
 import json
-import pylab as plt
-from bokeh.io import show
 from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar, HoverTool
 from bokeh.plotting import figure
 from bokeh.palettes import brewer

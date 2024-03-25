@@ -1,22 +1,9 @@
 import pandas as pd
 import streamlit as st
 from dataframes import *
-from bokeh.models import HoverTool
-from bokeh.plotting import figure, show
 from ranking_acumulados import limpeza_dados_top15_bairros, criar_grafico_top15
 from dataframes import *
-import matplotlib.pyplot as plt
-import geopandas as gpd
-from shapely import wkt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 import pandas as pd
-import geopandas as gpd
-import json
-import pylab as plt
-from bokeh.io import show
-from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar, HoverTool
-from bokeh.plotting import figure
-from bokeh.palettes import brewer
 from mapa import *
 from ranking_chamados import top_10_chamados
 from nivel_reservatorio_lineplot import plot_nivel_reservatorio, trata_nivel_reservatorio

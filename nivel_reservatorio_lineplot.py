@@ -9,8 +9,12 @@ def plot_nivel_reservatorio(reservatorios=[1], anos=[2021]):
 
     p = figure(title="Nível Anual dos Reservatórios", x_axis_label="X", y_axis_label="Y",
                x_axis_type="datetime",
-               y_range=Range1d(0, 5),
+               y_range=Range1d(0, 10),
                width=800)
+    
+    # Ajustar o tamanho do título
+    p.title.text_font_size = "18pt"
+    p.title.align = "center"
 
     cores = {
         1 : "Blue",

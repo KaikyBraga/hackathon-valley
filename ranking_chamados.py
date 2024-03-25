@@ -31,6 +31,10 @@ def top_10_chamados(df_bairro, df_chamado):
     # Nomeando o gráfico
     plot_2.title.text = "Os 10 bairros com mais chamados"
     plot_2.title.align = "left"
+    
+    # Ajustar o tamanho do título
+    plot_2.title.text_font_size = "18pt"
+    plot_2.title.align = "center"
 
     # Configurando as dimensões e o fundo das visualizações
     plot_2.width = 640
